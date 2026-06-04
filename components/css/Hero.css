@@ -1,0 +1,215 @@
+.hero-section {
+    background: #f8f8f8;
+    padding: 50px 0 50px;
+  }
+  
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    gap: 70px;
+    align-items: center;
+  }
+  
+  .hero-content h1 {
+    margin: 0 0 18px;
+    color: #000000;
+    font-size: 58px;
+    line-height: 68px;
+    font-weight: 800;
+    letter-spacing: -2px;
+  }
+  
+  .hero-content h1 span {
+    color: #e7594d;
+  }
+  
+  .hero-description {
+    max-width: 760px;
+    margin: 0 0 15px;
+    color: #000000;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .hero-list {
+    list-style: none;
+    margin: 0 0 28px;
+    padding: 0;
+  }
+  
+  .hero-list li {
+    position: relative;
+    padding-left: 36px;
+    margin-bottom: 9px;
+    color: #000000;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  
+  .hero-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: -3px;
+    color: #e7594d;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1;
+  }
+  
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-orange,
+  .btn-blue {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 28px;
+    border-radius: 4px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.25s ease;
+  }
+  
+  .btn-orange {
+    background: #e7594d;
+  }
+  
+  .btn-orange:hover {
+    background: #cf594f;
+    color: #ffffff;
+  }
+  
+  .btn-blue {
+    background: #003366;
+  }
+  
+  .btn-blue:hover {
+    background: #04274a;
+    color: #ffffff;
+  }
+  
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    flex-wrap: wrap;
+  } 
+  
+  .trust-logo {
+    width: 100px !important;
+    height: 40px !important;
+    object-fit: contain;
+  }
+  
+  .hero-form-wrap {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 18px 50px rgba(0, 51, 102, 0.08);
+  }
+  
+  .hubspot-form-box {
+    width: 100%;
+  }
+  
+  /* HubSpot inner form styling */
+  .hubspot-form-box iframe,
+  .hubspot-form-box form {
+    width: 100% !important;
+  }
+  
+  .hubspot-form-box input,
+  .hubspot-form-box textarea,
+  .hubspot-form-box select {
+    border-color: #003366 !important;
+    border-radius: 4px !important;
+  }
+  
+  .hubspot-form-box input[type="submit"],
+  .hubspot-form-box .hs-button {
+    background: #003366 !important;
+    color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 4px !important;
+    padding: 14px 34px !important;
+    font-weight: 800 !important;
+  }
+  
+  .hubspot-form-box input[type="submit"]:hover,
+  .hubspot-form-box .hs-button:hover {
+    background: #04274a !important;
+  }
+  
+  @media (max-width: 1199px) {
+    .hero-grid {
+      gap: 40px;
+    }
+  
+    .hero-content h1 {
+      font-size: 56px;
+      line-height: 66px;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .hero-section {
+      padding: 60px 0;
+    }
+  
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .hero-content {
+      text-align: left;
+    }
+  
+    .hero-form-wrap {
+      max-width: 720px;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .hero-section {
+      padding: 45px 0;
+    }
+  
+    .hero-content h1 {
+      font-size: 40px;
+      line-height: 50px;
+      letter-spacing: -1px;
+    }
+  
+    .hero-description,
+    .hero-list li {
+      font-size: 16px;
+      line-height: 26px;
+    }
+  
+    .hero-actions {
+      gap: 14px;
+    }
+  
+    .btn-orange,
+    .btn-blue {
+      width: 100%;
+      font-size: 16px;
+    }
+  
+    .hero-trust {
+      gap: 22px;
+    }
+  
+    .hero-form-wrap {
+      padding: 0;
+    }
+  }

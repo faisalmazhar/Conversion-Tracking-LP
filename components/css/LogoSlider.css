@@ -1,0 +1,45 @@
+.logo-slider-section {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .logo-slider-track {
+    display: flex;
+    width: max-content;
+    animation: logoScroll 100s linear infinite;
+  }
+  
+  .logo-slider-item {
+    min-width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slider-logo {
+    width: 130px;
+    height: 90px;
+    object-fit: contain;
+    filter: grayscale(100%);
+  }
+
+  .slider-logo:hover {
+    filter: grayscale(0%);
+  }
+  
+  @keyframes logoScroll {
+    from {
+      transform: translateX(0);
+    }
+  
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @media (max-width: 767px) {
+  
+    .logo-slider-item {
+      min-width: 150px;
+    }
+  }

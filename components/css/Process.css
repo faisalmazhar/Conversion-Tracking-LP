@@ -1,0 +1,166 @@
+.process-section {
+    background: #ffffff;
+    padding: 50px 0;
+  }
+  
+  .section-heading {
+    max-width: 850px;
+    margin: 0 auto 70px;
+    text-align: center;
+  }
+  
+  .section-heading h2 {
+    margin: 0 0 22px;
+    color: #000000;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+  }
+  
+  .section-heading p {
+    margin: 0 auto;
+    max-width: 780px;
+    color: #111111;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  
+  .process-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 26px;
+  }
+  
+  .process-grid::before {
+    content: "";
+    position: absolute;
+    top: 165px;
+    left: 10%;
+    right: 10%;
+    height: 10px;
+    background: #e7594d;
+    z-index: 0;
+  }
+  
+  .process-card {
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    min-height: 365px;
+    padding: 78px 25px 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 35px rgba(0, 51, 102, 0.08);
+    transition: all 0.35s ease;
+    overflow: visible;
+  }
+  
+  .process-card:hover {
+    background: linear-gradient(135deg, #003366 0%, #04274a 45%, #e7594d 100%);
+    transform: translateY(-8px);
+    box-shadow: 0 18px 45px rgba(0, 51, 102, 0.18);
+  }
+  
+  .process-icon {
+    position: absolute;
+    top: -43px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 86px;
+    height: 86px;
+    background: #003366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.35s ease;
+  }
+
+  .process-icon svg {
+    width: 48px;
+    height: 48px;
+    fill: #ffffff;
+  }
+  
+  
+  .process-card:hover .process-icon {
+    background: #e7594d;
+  }
+  
+  .process-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 58px;
+    height: 56px;
+    background: #f8f8f8;
+    color: #000000;
+    border-radius: 5px;
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 28px;
+    transition: all 0.35s ease;
+  }
+  
+  .process-card h3 {
+    margin: 0 0 24px;
+    color: #000000;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    transition: color 0.35s ease;
+  }
+  
+  .process-card p {
+    margin: 0;
+    color: #111111;
+    font-size: 16px;
+    line-height: 1.55;
+    transition: color 0.35s ease;
+  }
+  
+  .process-card:hover .process-number {
+    background: rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+  }
+  
+  .process-card:hover h3,
+  .process-card:hover p {
+    color: #ffffff;
+  }
+  
+  @media (max-width: 1199px) {
+    .process-grid {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 70px;
+    }
+  
+    .process-grid::before {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .process-section {
+      padding: 70px 0;
+    }
+  
+    .section-heading {
+      margin-bottom: 60px;
+    }
+  
+    .process-grid {
+      grid-template-columns: 1fr;
+      gap: 70px;
+    }
+  
+    .process-card {
+      min-height: auto;
+      padding: 72px 24px 30px;
+    }
+  
+    .process-card h3 {
+      font-size: 22px;
+    }
+  }
