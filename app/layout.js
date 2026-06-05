@@ -10,6 +10,7 @@ import "../components/css/WhyChooseUs.css";
 import "../components/css/ContactCTA.css";
 import "../components/css/FinalCTA.css";
 import "../components/css/Footer.css";
+import "../components/css/Testimonials.css";
 
 
 const inter = Inter({

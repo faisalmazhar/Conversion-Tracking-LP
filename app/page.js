@@ -8,6 +8,7 @@ import WhyChooseUs from "@/components/js/WhyChooseUs";
 import ContactCTA from "@/components/js/ContactCTA";
 import FinalCTA from "@/components/js/FinalCTA";
 import Footer from "@/components/js/Footer";
+import Testimonials from "@/components/js/Testimonials";
 
 
 export default function Home() {
@@ -19,8 +20,8 @@ export default function Home() {
       <About />
       <Services />
       <Process />
+      <Testimonials />
       <WhyChooseUs />
-      <ContactCTA />
       <FinalCTA />
       <Footer />
 

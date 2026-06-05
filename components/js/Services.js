@@ -1,77 +1,67 @@
-"use client";
+import Image from "next/image";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
-
-
-const AdTrackingIcon = () => (
-  <svg viewBox="0 0 64 64" aria-hidden="true">
-    <path d="M10 50h44v4H10v-4Zm5-8h8V24h-8v18Zm13 0h8V14h-8v28Zm13 0h8V30h-8v12ZM13 18l12-8 12 10 13-9 2 3-15 11-12-10-10 7-2-4Z" />
-  </svg>
-);
-
-const AffiliateIcon = () => (
-  <svg viewBox="0 0 64 64" aria-hidden="true">
-    <path d="M32 8a8 8 0 1 1 0 16 8 8 0 0 1 0-16ZM14 36a8 8 0 1 1 0 16 8 8 0 0 1 0-16Zm36 0a8 8 0 1 1 0 16 8 8 0 0 1 0-16ZM29 25h6v10h-6V25Zm-5 17-7-5 3-5 7 5-3 5Zm16-5 7-5 3 5-7 5-3-5Z" />
-  </svg>
-);
-
-const PaidAdsIcon = () => (
-  <svg viewBox="0 0 64 64" aria-hidden="true">
-    <path d="M8 26h10l26-12v36L18 38H8V26Zm42-8h4v28h-4V18ZM18 40l8 14h-8l-6-14h6Z" />
-  </svg>
-);
-
-const AnalyticsIcon = () => (
-  <svg viewBox="0 0 64 64" aria-hidden="true">
-    <path d="M10 10h44v44H10V10Zm6 6v32h32V16H16Zm5 24 8-10 7 6 9-14 4 3-12 19-7-6-7 9-2-7Z" />
-  </svg>
-);
 
 const services = [
   {
-    icon: <AdTrackingIcon />,
     title: "Ad Tracking Tools",
     desc: "Set up and troubleshoot tracking platforms used for affiliate and paid campaigns. Improve visibility with accurate click, lead, and conversion data.",
-    items: ["Voluum", "RedTrack", "ClickFlare", "Keitaro", "FunnelFlux"],
+    logos: [
+      { src: "/images/logos/voluum-logo.webp", alt: "Voluum" },
+      { src: "/images/logos/redtrack-logo.jpg", alt: "RedTrack" },
+      { src: "/images/logos/click-flare-logo.webp", alt: "ClickFlare" },
+      { src: "/images/logos/Keitaro-logo.webp", alt: "Keitaro" },
+      { src: "/images/logos/FunnelFluxlogo.webp", alt: "FunnelFlux" },
+    ],
   },
   {
-    icon: <AffiliateIcon />,
     title: "Affiliate Tracking Tools",
     desc: "Connect affiliate platforms with clean conversion tracking and reporting. Track partners, offers, payouts, and performance more accurately.",
-    items: ["Everflow", "ClickBank", "Impact", "Tune", "Cake"],
+    logos: [
+      { src: "/images/logos/everflow-logo.webp", alt: "Everflow" },
+      { src: "/images/logos/click-bank-logo.webp", alt: "ClickBank" },
+      { src: "/images/logos/impact-logo.webp", alt: "Impact" },
+      { src: "/images/logos/tune-logos.webp", alt: "Tune" },
+      { src: "/images/logos/cake-logos.webp", alt: "Cake" },
+    ],
   },
   {
-    icon: <PaidAdsIcon />,
     title: "Paid Ads Tracking",
     desc: "Measure leads and sales from paid media campaigns with reliable attribution. Fix missing conversions across major advertising platforms.",
-    items: ["Google Ads", "Meta Ads", "Bing Ads", "Outbrain", "Taboola"],
+    logos: [
+      { src: "/images/logos/google-ads-logo.webp", alt: "Google Ads" },
+      { src: "/images/logos/meta-ads-logo.webp", alt: "Meta Ads" },
+      { src: "/images/logos/bing-logo.webp", alt: "Bing Ads" },
+      { src: "/images/logos/outbrain-logo.webp", alt: "Outbrain" },
+      { src: "/images/logos/taboola-logo.webp", alt: "Taboola" },
+    ],
   },
   {
-    icon: <AnalyticsIcon />,
     title: "Analytics Tracking",
     desc: "Build a clean analytics foundation for reporting and decision-making. Track key events across websites, forms, funnels, and CRM tools.",
-    items: ["GA4", "GTM", "Server Side Tracking", "Stape.io", "Looker Studio"],
+    logos: [
+      { src: "/images/logos/google-analytics-logo.webp", alt: "GA4" },
+      { src: "/images/logos/google-tag-manager-logo.webp", alt: "GTM" },
+      { src: "/images/logos/stape-logos.webp", alt: "Stape" },
+      { src: "/images/logos/google-data-studio.webp", alt: "Looker Studio" },
+      { src: "/images/logos/google-big-query-logos.webp", alt: "BigQuery" },
+    ],
   },
 ];
 
 const ServiceCard = ({ service }) => (
   <div className="service-card">
-    <div className="service-icon">{service.icon}</div>
 
     <h3>{service.title}</h3>
-    <p className="service-desc">{service.desc}</p>
 
-    <ul>
-      {service.items.map((item, itemIndex) => (
-        <li key={itemIndex}>{item}</li>
+    <div className="service-logo-row">
+      {service.logos.map((logo, index) => (
+        <div className="service-logo-pill" key={index} data-tooltip={logo.alt}>
+         <Image src={logo.src} alt={logo.alt} width={80} height={36} />
+      </div>
       ))}
-    </ul>
+    </div>
+
+    <p className="service-desc">{service.desc}</p>
 
     <a href="#contact" className="service-more">
       Explore More →
@@ -98,16 +88,6 @@ export default function Services() {
           </a>
         </div>
 
-        <div className="services-slider-nav">
-          <button className="services-prev" aria-label="Previous">
-            ←
-          </button>
-
-          <button className="services-next" aria-label="Next">
-            →
-          </button>
-        </div>
-
         <div className="services-grid">
           {services.map((service, index) => (
             <ServiceCard service={service} key={`desktop-${index}`} />
@@ -115,36 +95,11 @@ export default function Services() {
         </div>
 
         <div className="services-mobile-slider">
-          <Swiper
-            modules={[Autoplay, Pagination, Navigation]}
-            spaceBetween={20}
-            slidesPerView={1.1}
-            loop={true}
-            navigation={{
-              prevEl: ".services-prev",
-              nextEl: ".services-next",
-            }}
-            pagination={{ clickable: true }}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            breakpoints={{
-              480: {
-                slidesPerView: 1.2,
-              },
-              640: {
-                slidesPerView: 1.5,
-              },
-            }}
-          >
-            {services.map((service, index) => (
-              <SwiperSlide key={index}>
-                <ServiceCard service={service} />
-              </SwiperSlide>
+          <div className="services-mobile-track">
+            {[...services, ...services].map((service, index) => (
+              <ServiceCard service={service} key={`mobile-${index}`} />
             ))}
-          </Swiper>
+          </div>
         </div>
 
         <div className="services-bottom">

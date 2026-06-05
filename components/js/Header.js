@@ -1,4 +1,4 @@
-"use client"; // This makes this component run in the browser because we use useState, useEffect, clicks, window, and document.
+"use client"; // This component run in the browser because we use useState, useEffect, clicks, window, and document.
 
 import { useEffect, useState } from "react"; // Import React hooks for state and scroll detection.
 import Image from "next/image"; // Import Next.js optimized image component.
