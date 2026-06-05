@@ -23,14 +23,6 @@ section {
   padding: 0 15px;
 }
 
-.hero-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background: #f5f7fb;
-  padding: 100px 0;
-}
-
 .eyebrow {
   color: #2563eb;
   font-weight: 700;
